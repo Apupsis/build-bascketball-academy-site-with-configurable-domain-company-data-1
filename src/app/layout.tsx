@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { companyConfig } from "@/config/company";
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A minimal Next.js starter template",
+  title: `${companyConfig.company.name} - ${companyConfig.company.tagline}`,
+  description: "Premier basketball academy offering youth development, elite training, and private coaching. Train with experienced coaches and reach your full potential.",
+  keywords: ["basketball academy", "basketball training", "youth basketball", "sports training", "basketball camp"],
+  openGraph: {
+    title: `${companyConfig.company.name} - ${companyConfig.company.tagline}`,
+    description: "Premier basketball academy offering youth development, elite training, and private coaching.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
