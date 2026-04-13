@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { companyConfig } from "@/config/company";
+import "./globals.css";
 
 export default function RootLayout({
   children,
