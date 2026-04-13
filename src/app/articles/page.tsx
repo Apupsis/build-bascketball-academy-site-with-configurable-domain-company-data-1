@@ -1,13 +1,14 @@
-import { companyConfig } from "@/config/company";
+import { getAllArticles } from "@/lib/articles";
+import Link from "next/link";
 
 export default function ArticlesPage() {
-  const { articles } = companyConfig;
+  const articles = getAllArticles();
 
   return (
     <>
       <header className="header scrolled">
         <div className="container header-content">
-          <a href="/" className="logo">
+          <Link href="/" className="logo">
             <svg className="logo-icon" viewBox="0 0 40 40" fill="none">
               <circle cx="20" cy="20" r="18" stroke="#E63946" strokeWidth="2" />
               <path
@@ -23,15 +24,15 @@ export default function ArticlesPage() {
               />
             </svg>
             Pro Court Academy
-          </a>
+          </Link>
           <nav className="nav">
-            <a href="/">Home</a>
-            <a href="#programs">Programs</a>
-            <a href="#coaches">Coaches</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" className="btn btn-primary" style={{ padding: "10px 24px" }}>
+            <Link href="/">Home</Link>
+            <Link href="#programs">Programs</Link>
+            <Link href="#coaches">Coaches</Link>
+            <Link href="#contact">Contact</Link>
+            <Link href="#contact" className="btn btn-primary" style={{ padding: "10px 24px" }}>
               Enroll Now
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -49,7 +50,7 @@ export default function ArticlesPage() {
         <div className="container">
           <div className="articles-grid">
             {articles.map((article) => (
-              <a key={article.id} href={`/articles/${article.slug}`} className="article-card">
+              <Link key={article.slug} href={`/articles/${article.slug}`} className="article-card">
                 <div className="article-image-wrapper">
                   <img src={article.image} alt={article.title} className="article-image" />
                   <span className="article-category">{article.category}</span>
@@ -59,10 +60,10 @@ export default function ArticlesPage() {
                   <p className="article-excerpt">{article.excerpt}</p>
                   <div className="article-meta">
                     <span className="article-author">{article.author}</span>
-                    <span className="article-date">{article.date}</span>
+                    <span className="article-date">{new Date(article.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -80,9 +81,9 @@ export default function ArticlesPage() {
             <div>
               <h4 className="footer-title">Quick Links</h4>
               <ul className="footer-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/articles">Articles</Link></li>
+                <li><Link href="#contact">Contact</Link></li>
               </ul>
             </div>
             <div>

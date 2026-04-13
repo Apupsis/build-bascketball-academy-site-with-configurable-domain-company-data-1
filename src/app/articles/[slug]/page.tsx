@@ -1,13 +1,22 @@
-import { companyConfig } from "@/config/company";
+import { getArticleBySlug, getAllArticles } from "@/lib/articles";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const articles = getAllArticles();
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = companyConfig.articles.find((a) => a.slug === slug);
+  const article = getArticleBySlug(slug);
 
   if (!article) {
     notFound();
@@ -17,7 +26,7 @@ export default async function ArticlePage({ params }: Props) {
     <>
       <header className="header scrolled">
         <div className="container header-content">
-          <a href="/" className="logo">
+          <Link href="/" className="logo">
             <svg className="logo-icon" viewBox="0 0 40 40" fill="none">
               <circle cx="20" cy="20" r="18" stroke="#E63946" strokeWidth="2" />
               <path
@@ -33,14 +42,14 @@ export default async function ArticlePage({ params }: Props) {
               />
             </svg>
             Pro Court Academy
-          </a>
+          </Link>
           <nav className="nav">
-            <a href="/">Home</a>
-            <a href="/articles">Articles</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" className="btn btn-primary" style={{ padding: "10px 24px" }}>
+            <Link href="/">Home</Link>
+            <Link href="/articles">Articles</Link>
+            <Link href="#contact">Contact</Link>
+            <Link href="#contact" className="btn btn-primary" style={{ padding: "10px 24px" }}>
               Enroll Now
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -54,19 +63,21 @@ export default async function ArticlePage({ params }: Props) {
               <h1 className="article-hero-title">{article.title}</h1>
               <div className="article-hero-meta">
                 <span>By {article.author}</span>
-                <span>{article.date}</span>
+                <span>{new Date(article.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="container article-body-container">
-          <div className="article-body" dangerouslySetInnerHTML={{ __html: article.content }} />
+          <div className="article-body">
+            <MDXRemote source={article.content} />
+          </div>
           
           <div className="article-footer">
-            <a href="/articles" className="btn btn-secondary">
+            <Link href="/articles" className="btn btn-secondary">
               ← Back to Articles
-            </a>
+            </Link>
           </div>
         </div>
       </article>
@@ -83,9 +94,9 @@ export default async function ArticlePage({ params }: Props) {
             <div>
               <h4 className="footer-title">Quick Links</h4>
               <ul className="footer-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/articles">Articles</Link></li>
+                <li><Link href="#contact">Contact</Link></li>
               </ul>
             </div>
             <div>
