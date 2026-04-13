@@ -948,10 +948,145 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 28px;
   margin: 40px 0 20px;
   color: var(--text-primary);
+  position: relative;
+  padding-right: 20px;
+}
+
+.article-body h2::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.article-body h3 {
+  font-size: 22px;
+  margin: 30px 0 16px;
+  color: var(--accent);
 }
 
 .article-body p {
   margin-bottom: 20px;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 24px;
+  padding-right: 24px;
+}
+
+.article-body li {
+  margin-bottom: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+
+.article-body ul li::before {
+  content: '🏀';
+  position: absolute;
+  right: -20px;
+  font-size: 14px;
+}
+
+.article-body ul li {
+  list-style: none;
+}
+
+.article-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.article-cta {
+  background: var(--bg-surface);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  padding: 32px;
+  margin: 48px 0;
+  text-align: center;
+}
+
+.article-cta h3 {
+  color: var(--text-primary);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.article-cta p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.article-footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-author-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-surface);
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.article-author-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+
+.article-author-info h4 {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.article-author-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Related Articles */
+.related-articles {
+  background: var(--bg-surface);
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.related-articles h3 {
+  color: var(--text-primary);
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.related-article-link {
+  display: block;
+  padding: 16px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.related-article-link:hover {
+  background: var(--primary);
+  color: white;
 }
 
 /* CTA Section */
@@ -1088,5 +1223,34 @@ h1, h2, h3, h4, h5, h6 {
   
   .article-hero-title {
     font-size: 32px;
+  }
+  
+  .article-body {
+    font-size: 16px;
+  }
+  
+  .article-body h2 {
+    font-size: 22px;
+  }
+  
+  .article-body h3 {
+    font-size: 18px;
+  }
+  
+  .article-cta {
+    padding: 24px;
+    margin: 32px 0;
+  }
+  
+  .article-cta h3 {
+    font-size: 20px;
+  }
+  
+  .article-footer {
+    flex-direction: column;
+  }
+  
+  .articles-grid {
+    grid-template-columns: 1fr;
   }
 }
