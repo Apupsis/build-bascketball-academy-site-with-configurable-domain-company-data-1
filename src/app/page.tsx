@@ -41,6 +41,7 @@ export default function Home() {
             <a href="#coaches">Coaches</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#gallery">Gallery</a>
+            <a href="/articles">Articles</a>
             <a href="#contact">Contact</a>
             <a href="#contact" className="btn btn-primary" style={{ padding: "10px 24px" }}>
               Enroll Now

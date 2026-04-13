@@ -27,6 +27,18 @@ export interface Testimonial {
   image: string;
 }
 
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  image: string;
+  author: string;
+  date: string;
+  category: string;
+}
+
 export interface Social {
   facebook: string;
   instagram: string;
@@ -50,6 +62,7 @@ export interface CompanyConfig {
   coaches: Coach[];
   testimonials: Testimonial[];
   gallery: string[];
+  articles: Article[];
 }
 
 export const companyConfig: CompanyConfig = {
@@ -167,5 +180,88 @@ export const companyConfig: CompanyConfig = {
     "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop",
     "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
     "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop",
+  ],
+  articles: [
+    {
+      id: "1",
+      slug: "5-tips-for-better-shooting",
+      title: "5 Tips for Better Shooting",
+      excerpt: "Improve your shooting technique with these proven tips from professional coaches.",
+      content: `<p>Shooting is one of the most important skills in basketball. Whether you're a beginner or an advanced player, there's always room for improvement. Here are five proven tips to help you become a better shooter.</p>
+      
+      <h2>1. Follow Through</h2>
+      <p>One of the most common mistakes is not following through on your shot. Make sure to snap your wrist and follow through toward the basket. Your fingers should point down after the release.</p>
+      
+      <h2>2. Keep Your Eyes on the Target</h2>
+      <p>Many players look away from the basket before releasing the ball. Train yourself to keep your eyes on the target throughout the entire shot. Pick a specific spot on the rim and focus on it.</p>
+      
+      <h2>3. Use Your Legs</h2>
+      <p>Power comes from your legs, not just your arms. Bend your knees and use a rhythmic motion to generate upward force. This will give your shot more consistency and power.</p>
+      
+      <h2>4. Practice Daily</h2>
+      <p>The key to becoming a great shooter is repetition. Aim for at least 100 made shots per day. Focus on form over quantity, especially when you're starting out.</p>
+      
+      <h2>5. Stay Confident</h2>
+      <p>Confidence is crucial in shooting. Even when you miss, stay positive and keep believing in yourself. The best shooters have short memories and always focus on the next shot.</p>`,
+      image: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&h=400&fit=crop",
+      author: "Marcus Johnson",
+      date: "April 10, 2026",
+      category: "Training"
+    },
+    {
+      id: "2",
+      slug: "youth-athletics-why-start-early",
+      title: "Why Youth Should Start Basketball Early",
+      excerpt: "Discover the benefits of introducing basketball to young athletes and how it builds character.",
+      content: `<p>Starting basketball at a young age offers numerous benefits beyond just physical fitness. Here's why early introduction to the sport can be transformative for young athletes.</p>
+      
+      <h2>Physical Development</h2>
+      <p>Basketball helps children develop coordination, balance, and motor skills. The constant movement and variety of movements engage different muscle groups and promote overall physical fitness.</p>
+      
+      <h2>Teamwork and Social Skills</h2>
+      <p>Playing on a team teaches children how to work with others, communicate effectively, and resolve conflicts. These social skills are valuable both on and off the court.</p>
+      
+      <h2>Discipline and Focus</h2>
+      <p>Regular practice and training instill discipline in young athletes. Learning to follow instructions and focus on goals translates to academic success and other areas of life.</p>
+      
+      <h2>Building Confidence</h2>
+      <p>As children improve their skills and see progress, their confidence grows. This self-esteem carries over to other aspects of their lives, helping them face challenges with greater resilience.</p>
+      
+      <h2>Lifelong Love for Sports</h2>
+      <p>Starting early creates a foundation for a lifelong appreciation for physical activity and healthy living. Many professional athletes began playing when they were just 5-7 years old.</p>`,
+      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=400&fit=crop",
+      author: "Lisa Thompson",
+      date: "April 8, 2026",
+      category: "Youth"
+    },
+    {
+      id: "3",
+      slug: "nutrition-for-athletes",
+      title: "Proper Nutrition for Young Athletes",
+      excerpt: "Learn what foods fuel performance and help young athletes reach their full potential.",
+      content: `<p>Proper nutrition is essential for young athletes to perform at their best and recover properly. Here's a guide to fueling your basketball training with the right foods.</p>
+      
+      <h2>Carbohydrates for Energy</h2>
+      <p>Carbohydrates are the primary fuel source for high-intensity exercise. Include whole grains, fruits, and vegetables in your diet to maintain energy levels throughout practices and games.</p>
+      
+      <h2>Protein for Muscle Recovery</h2>
+      <p>Protein helps repair and build muscle tissue. Good sources include lean meats, eggs, dairy, beans, and nuts. Aim to include protein in every meal and snack.</p>
+      
+      <h2>Hydration is Key</h2>
+      <p>Dehydration can significantly impact performance. Drink water before, during, and after activities. For longer sessions, consider electrolyte drinks to replace lost minerals.</p>
+      
+      <h2>Pre-Game Nutrition</h2>
+      <p>Eat a balanced meal 2-3 hours before games or practices. Focus on complex carbs and lean proteins. Avoid heavy, fatty foods that can slow you down.</p>
+      
+      <h2>Post-Train Recovery</h2>
+      <p>Within 30-60 minutes after training, consume a snack combining protein and carbs. This helps replenish energy stores and supports muscle recovery.</p>
+      
+      <h2>Avoid Processed Foods</h2>
+      <p>Limit sugary drinks, fast food, and processed snacks. These can cause energy crashes and don't provide the nutrients growing athletes need.</p>`,
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop",
+      author: "Sarah Williams",
+      date: "April 5, 2026",
+      category: "Nutrition"
+    }
   ],
 };
