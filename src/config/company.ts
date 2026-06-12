@@ -88,7 +88,7 @@ export const companyConfig: CompanyConfig = {
       price: "1500 جم/شهر",
       duration: "4 أسابيع",
       ageGroup: "أعمار 6-12",
-      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+      image: "/images/programs/program-1.jpg",
       features: ["المهارات الأساسية", "تمارين ممتعة وتفاعلية", "ألعاب جماعية", "تطوير التنسيق الحركي"],
     },
     {
@@ -98,7 +98,7 @@ export const companyConfig: CompanyConfig = {
       price: "2500 جم/شهر",
       duration: "4 أسابيع",
       ageGroup: "أعمار 13-18",
-      image: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop",
+      image: "/images/programs/program-2.jpg",
       features: ["مهارات متقدمة", "لياقة بدنية احترافية", "تحليل الفيديو", "تكتيكات الملعب"],
     },
     {
@@ -108,7 +108,7 @@ export const companyConfig: CompanyConfig = {
       price: "300 جم/جلسة",
       duration: "ساعة واحدة",
       ageGroup: "جميع الأعمار",
-      image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=600&h=400&fit=crop",
+      image: "/images/programs/program-3.jpg",
       features: ["تدريب فردي مخصص", "خطة تطوير شخصية", "تغذية راجعة فورية", "مرونة في المواعيد"],
     },
     {
@@ -118,7 +118,7 @@ export const companyConfig: CompanyConfig = {
       price: "4500 جم",
       duration: "أسبوعان",
       ageGroup: "أعمار 8-18",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+      image: "/images/programs/program-4.jpg",
       features: ["تدريب مكثف يومي", "بطولات داخلية", "شهادة إتمام معتمدة", "رحلات ترفيهية"],
     },
   ],
@@ -129,7 +129,7 @@ export const companyConfig: CompanyConfig = {
       title: "المدرب الرئيسي",
       specialization: "استراتيجية الهجوم",
       experience: "15+ سنة",
-      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop",
+      image: "/images/coaches/coach-1.jpg",
       bio: "لاعب محترف سابق في الدوري المصري، حاصل على شهادة FIBA للتدريب من المستوى الثالث. قاد فريق الشباب المصري في عدة بطولات عربية ودولية. متخصص في بناء استراتيجيات الهجوم وتطوير قدرات اللاعبين على صنع الفرص.",
     },
     {
@@ -138,7 +138,7 @@ export const companyConfig: CompanyConfig = {
       title: "مدرب مساعد",
       specialization: "الدفاع واللياقة",
       experience: "10+ سنة",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+      image: "/images/coaches/coach-2.jpg",
       bio: "متخصص لياقة بدنية معتمد من الاتحاد الأوروبي للرياضة، عمل مع أكاديميات في إسبانيا وفرنسا قبل عودته لمصر. يمزج بين تدريب القوة وتكتيكات الدفاع المتطورة لتحقيق أداء متكامل لكل لاعب.",
     },
     {
@@ -147,7 +147,7 @@ export const companyConfig: CompanyConfig = {
       title: "مدرب مهارات",
       specialization: "التصويب والدريبل",
       experience: "8+ سنة",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      image: "/images/coaches/coach-3.jpg",
       bio: "متخصص في تطوير مهارات التصويب والتحكم بالكرة، استخدم منهج NBA Skills Academy في برامجه التدريبية. ساعد أكثر من 200 لاعب على تحسين نسبة تصويبهم بمعدل 30% خلال موسم واحد فقط.",
     },
     {
@@ -156,7 +156,7 @@ export const companyConfig: CompanyConfig = {
       title: "مدربة ناشئين",
       specialization: "تطوير الأساسيات",
       experience: "12+ سنة",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+      image: "/images/coaches/coach-4.jpg",
       bio: "رائدة في تدريب الأطفال والناشئين في مصر، طورت منهجاً تعليمياً خاصاً يجمع بين الأساسيات التقنية والتطوير النفسي. حاملة شهادة دكتوراه في علم نفس الرياضة، وأستاذة متعاونة في جامعة القاهرة.",
     },
   ],
@@ -166,30 +166,30 @@ export const companyConfig: CompanyConfig = {
       name: "محمد عادل",
       role: "والد",
       content: "ابني تحسن بشكل كبير منذ انضمامه للأكاديمية قبل ستة أشهر. ليس فقط في مهارات كرة السلة، بل في ثقته بنفسه وقدرته على العمل الجماعي. المدربون محترفون جداً ويهتمون بكل طفل بشكل شخصي.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      image: "/images/testimonials/testimonial-1.jpg",
     },
     {
       id: "2",
       name: "نور الدين",
       role: "طالب — 17 سنة",
       content: "انضممت للأكاديمية وأنا أحلم باللعب في الدوري الجامعي. بعد سنة من التدريب المكثف مع الأستاذ أحمد، حصلت على منحة دراسية في جامعة القاهرة بسبب مستواي في كرة السلة. هذه الأكاديمية غيّرت حياتي!",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      image: "/images/testimonials/testimonial-2.jpg",
     },
     {
       id: "3",
       name: "هالة محمد",
       role: "والدة",
       content: "أفضل أكاديمية كرة سلة في مصر بلا منازع. ابنتي تدربت مع الأستاذة منى وتحولت من طفلة خجولة إلى لاعبة واثقة ومتألقة. المنهج التدريبي علمي ومدروس، والبيئة آمنة ومحفزة.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+      image: "/images/testimonials/testimonial-3.jpg",
     },
   ],
   gallery: [
-    "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400&h=300&fit=crop",
+    "/images/gallery/gallery-1.jpg",
+    "/images/gallery/gallery-2.jpg",
+    "/images/gallery/gallery-3.jpg",
+    "/images/gallery/gallery-4.jpg",
+    "/images/gallery/gallery-5.jpg",
+    "/images/gallery/gallery-6.jpg",
   ],
   articles: [
     {
@@ -215,7 +215,7 @@ export const companyConfig: CompanyConfig = {
 <p>أفضل المصوبين في التاريخ كـ ستيف ناش وكيفن دورانت لديهم روتين ثابت قبل كل تصويبة. طور روتينك الخاص: نفس عميق، تمسيد للكرة، نظرة للسلة، ثم التصويب. هذا الروتين يهدئ أعصابك ويبني الثقة في اللحظات الحاسمة.</p>
 
 <p>تذكر أن التحسن يستغرق وقتاً. المهم هو الاستمرار والتركيز على الجودة لا الكمية. تدرب مع مدربينا في أكاديمية القاهرة لتحصل على تغذية راجعة فورية وتتقدم بسرعة أكبر.</p>`,
-      image: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&h=400&fit=crop",
+      image: "/images/articles/article-1.jpg",
       author: "أحمد محمد",
       date: "10 أبريل 2026",
       category: "تدريب",
@@ -243,7 +243,7 @@ export const companyConfig: CompanyConfig = {
 <p>الطفل الذي يتعلم حب الرياضة مبكراً يحمل هذه العادة معه للبلوغ. في عالم تنتشر فيه السمنة وأمراض الجلوس، الرياضة المبكرة هي أفضل استثمار في صحة طفلك على المدى الطويل.</p>
 
 <p>في أكاديمية القاهرة، صممنا برنامج الناشئين خصيصاً للأعمار 6-12 بأسلوب تعليمي يجمع المرح مع التطور. تواصل معنا اليوم لحجز جلسة تجريبية مجانية لطفلك.</p>`,
-      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=400&fit=crop",
+      image: "/images/articles/article-2.jpg",
       author: "منى أحمد",
       date: "8 أبريل 2026",
       category: "شباب",
@@ -271,7 +271,7 @@ export const companyConfig: CompanyConfig = {
 <p>أول 30-60 دقيقة بعد التدريب هي "نافذة الاسترداد" الذهبية. جسمك يمتص العناصر الغذائية بكفاءة عالية. تناول مزيجاً من البروتين والكربوهيدرات: عصير بروتين مع موزة، أو لبن زبادي مع عسل وفاكهة. هذا يسرع بناء العضلات ويقلل آلام اليوم التالي.</p>
 
 <p>تذكر أن التغذية رحلة وليست حلاً سحرياً. التغييرات التدريجية والمستمرة هي التي تصنع الفارق. استشر أخصائي تغذية رياضية للحصول على خطة مخصصة لاحتياجاتك وأهدافك.</p>`,
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop",
+      image: "/images/articles/article-3.jpg",
       author: "كريم يوسف",
       date: "5 أبريل 2026",
       category: "تغذية",

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "أفضل أكاديمية كرة سلة في مصر. تدريب احترافي للناشئين والشباب مع مدربين معتمدين دولياً.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&h=630&fit=crop",
+        url: "/images/og.jpg",
         width: 1200,
         height: 630,
         alt: `${company.name} - أكاديمية كرة السلة`,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${company.name} | ${company.tagline}`,
     description: "أفضل أكاديمية كرة سلة في مصر.",
-    images: ["https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&h=630&fit=crop"],
+    images: ["/images/og.jpg"],
   },
   robots: {
     index: true,

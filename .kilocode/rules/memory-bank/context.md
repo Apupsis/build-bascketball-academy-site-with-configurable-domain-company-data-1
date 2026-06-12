@@ -24,6 +24,10 @@ A fully functional basketball academy website with configurable company data, pr
 - [x] **Build Quality**: Added `trailingSlash: true` to `next.config.ts`
 - [x] **UX**: Created custom `not-found.tsx` (404 page) in site style
 - [x] **Build**: TypeScript clean + 16/16 static pages generated successfully
+- [x] **File Creation**: Created `domain.md` containing the current domain name `cairocourts.com`.
+- [x] **Asset Localization**: Downloaded all 22 external images locally to `public/images/` and updated `company.ts` config, `page.tsx` Hero, and `layout.tsx` metadata to use them.
+
+
 
 ## Current Structure
 
@@ -80,3 +84,5 @@ npm run typecheck
 | Session 2 | RTL optimization & Arabic localization |
 | Session 3 | Enhanced mobile responsive design with 4 breakpoints |
 | Session 4 | Major: SEO metadata, layout refactor, content fixes, sitemap, robots.txt, 404 page, trailingSlash, next/font |
+| Session 5 | Created `domain.md` with the current domain name `cairocourts.com` |
+| Session 6 | Downloaded and localized all external images, removing all external remote image dependencies. |
