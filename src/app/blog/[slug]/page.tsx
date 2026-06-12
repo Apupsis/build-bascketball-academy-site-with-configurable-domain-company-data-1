@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -11,6 +12,25 @@ export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const article = companyConfig.articles.find((a) => a.slug === slug);
+
+  if (!article) {
+    return { title: "مقال غير موجود" };
+  }
+
+  return {
+    title: article.title,
+    description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      images: [{ url: article.image, width: 800, height: 400, alt: article.title }],
+    },
+  };
 }
 
 export default async function BlogArticlePage({ params }: Props) {
@@ -38,11 +58,11 @@ export default async function BlogArticlePage({ params }: Props) {
       </div>
 
       <div className="container article-body-container">
-        <div 
+        <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
-        
+
         <div className="article-footer">
           <Link href="/blog" className="btn btn-secondary">
             ← العودة للمقالات

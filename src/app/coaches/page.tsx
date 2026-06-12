@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
+
+export const metadata: Metadata = {
+  title: "فريق المدربين",
+  description:
+    "تعرف على فريق مدربينا المعتمدين دولياً في أكاديمية القاهرة لكرة السلة. خبرة تجمع بين الاحتراف الدولي والمعرفة المحلية.",
+  openGraph: {
+    title: "فريق المدربين | أكاديمية القاهرة",
+    description: "مدربون معتمدون دولياً بخبرة تزيد عن 8 سنوات لكل منهم. تعلم من أفضل المتخصصين في كرة السلة بمصر.",
+  },
+};
 
 export default function CoachesPage() {
   const { coaches, company } = companyConfig;

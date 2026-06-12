@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `أكاديمية القاهرة | حيث يصنع الأبطال`,
+  },
+  description:
+    "أفضل أكاديمية كرة سلة في مصر. تدريب احترافي للناشئين والشباب مع مدربين معتمدين دولياً. سجّل الآن واحجز جلستك التجريبية المجانية.",
+};
 
 export default function Home() {
   const { company, programs, coaches, testimonials, gallery } = companyConfig;
@@ -7,7 +16,12 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-image">
-          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&q=80" alt="Basketball Training" />
+          <img
+            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&q=80"
+            alt="Basketball Training"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
         <div className="container">
           <div className="hero-content">

@@ -1,12 +1,19 @@
+import type { Metadata } from "next";
 import LegalPage from "@/app/legal/LegalPage";
 import { companyConfig } from "@/config/company";
+
+export const metadata: Metadata = {
+  title: "شروط الاستخدام",
+  description: "اقرأ شروط استخدام موقع أكاديمية القاهرة لكرة السلة.",
+  robots: { index: false },
+};
 
 export default function TermsOfUsePage() {
   return (
     <LegalPage title="شروط الاستخدام">
       <h2>مقدمة</h2>
       <p>
-        مرحباً بك في موقع أكاديمية القاهرةلل basketball. باستخدام هذا الموقع، فإنك توافق على الالتزام بشروط الاستخدام هذه. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام موقعنا.
+        مرحباً بك في موقع أكاديمية القاهرة لكرة السلة. باستخدام هذا الموقع، فإنك توافق على الالتزام بشروط الاستخدام هذه. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام موقعنا.
       </p>
 
       <h2>استخدام الموقع</h2>

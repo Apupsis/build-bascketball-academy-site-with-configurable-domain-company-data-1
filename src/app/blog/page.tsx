@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "المقالات",
+  description:
+    "اقرأ أحدث المقالات والنصائح حول تدريب كرة السلة والتغذية الرياضية وتطوير الشباب من خبراء أكاديمية القاهرة.",
+  openGraph: {
+    title: "المقالات | أكاديمية القاهرة",
+    description: "نصائح ومقالات متخصصة في كرة السلة والتغذية الرياضية وتطوير المواهب.",
+  },
+};
 
 export default function BlogPage() {
   const { articles } = companyConfig;
@@ -10,7 +21,7 @@ export default function BlogPage() {
         <div className="container">
           <h1 className="page-hero-title">المقالات</h1>
           <p className="page-hero-subtitle">
-            نصائح ومقالات حول تدريب basketball والنnutrition والعوامل لنجاحك في اللعبة
+            نصائح ومقالات حول تدريب كرة السلة والتغذية الرياضية وعوامل النجاح في اللعبة
           </p>
         </div>
       </section>

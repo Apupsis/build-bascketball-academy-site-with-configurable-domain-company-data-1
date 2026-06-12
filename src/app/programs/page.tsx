@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "البرامج التدريبية",
+  description:
+    "اكتشف برامجنا التدريبية لكرة السلة: برنامج الناشئين، التدريب المتقدم، التدريب الفردي، والمعسكر الصيفي. للأعمار 6-18 وجميع المستويات.",
+  openGraph: {
+    title: "البرامج التدريبية | أكاديمية القاهرة",
+    description: "اختر البرنامج المثالي لمستواك: برنامج الناشئين، التدريب المتقدم، التدريب الفردي، أو المعسكر الصيفي.",
+  },
+};
 
 export default function ProgramsPage() {
   const { programs } = companyConfig;

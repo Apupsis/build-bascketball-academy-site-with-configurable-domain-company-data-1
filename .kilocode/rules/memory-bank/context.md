@@ -2,71 +2,74 @@
 
 ## Current State
 
-**Project Status**: ✅ Complete
+**Project Status**: ✅ Complete — Improved & Optimized
 
-A fully functional basketball academy website with configurable company data and domain.
+A fully functional basketball academy website with configurable company data, proper SEO metadata, and quality static export.
 
-## Recently Completed
+## Recently Completed (Latest Session)
 
-- [x] Created SPEC.md specification document
-- [x] Built basketball academy website with:
-  - Configurable company data (src/config/company.ts)
-  - Domain configuration
-  - Programs section (Youth Development, Elite Training, Private Coaching)
-  - Coaches section (4 coaches with profiles)
-  - Testimonials section
-  - Gallery section
-  - Contact form with validation
-  - Responsive design (mobile/tablet/desktop)
-- [x] Custom design system with:
-  - Color palette: Primary #C9261D, Secondary #1A1A2E, Accent #F4A024
-  - Typography: Tajawal (Arabic/English support)
-  - Smooth animations and hover effects
-- [x] RTL optimization for Arabic localization
-- [x] Enhanced mobile responsive design (breakpoints: 1200px, 1024px, 768px, 480px)
-- [x] All typecheck and build passes
+- [x] **Critical Bug Fix**: Refactored `layout.tsx` from `"use client"` to server component
+  - Created `src/components/Header.tsx` (client) with `usePathname()` active link detection
+  - Created `src/components/Footer.tsx` (server) with logo, clickable phone/email
+- [x] **SEO**: Added `export const metadata` to ALL pages (layout, homepage, programs, coaches, gallery, blog, contact, all legal pages)
+- [x] **SEO**: Added `generateMetadata` for dynamic `/blog/[slug]` pages
+- [x] **SEO**: Added global OpenGraph + Twitter Card tags in layout
+- [x] **SEO**: Created `public/robots.txt` and `public/sitemap.xml`
+- [x] **Content**: Fixed all mixed-language text (Arabic/English/Russian/Japanese)
+- [x] **Content**: Fixed Chinese character `月` in prices → `شهر`
+- [x] **Content**: Expanded article content (each article now has 5+ sections)
+- [x] **Content**: Expanded coach biographies
+- [x] **Performance**: Migrated Google Fonts @import → `next/font/google` (Tajawal)
+- [x] **Performance**: Added `fetchPriority="high"` on hero image
+- [x] **Build Quality**: Added `trailingSlash: true` to `next.config.ts`
+- [x] **UX**: Created custom `not-found.tsx` (404 page) in site style
+- [x] **Build**: TypeScript clean + 16/16 static pages generated successfully
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
 | `src/config/company.ts` | Company data & configuration | ✅ Complete |
-| `src/app/page.tsx` | Main homepage | ✅ Complete |
-| `src/app/layout.tsx` | Root layout with metadata | ✅ Complete |
-| `src/app/globals.css` | Custom design system | ✅ Complete |
-| `public/logo.svg` | Basketball logo | ✅ Complete |
-| `SPEC.md` | Project specification | ✅ Complete |
+| `src/app/layout.tsx` | Server layout with metadata | ✅ Fixed |
+| `src/components/Header.tsx` | Client header with nav | ✅ New |
+| `src/components/Footer.tsx` | Server footer with logo | ✅ New |
+| `src/app/not-found.tsx` | Custom 404 page | ✅ New |
+| `src/app/globals.css` | Custom design system | ✅ Updated |
+| `public/robots.txt` | SEO robots file | ✅ New |
+| `public/sitemap.xml` | SEO sitemap | ✅ New |
+| `next.config.ts` | trailingSlash: true | ✅ Updated |
 
 ## Configuration
 
 To customize the site, edit `src/config/company.ts`:
-- `domain`: Your domain (e.g., "myacademy.com")
+- `domain`: Your domain (e.g., "cairocourts.com")
 - `company`: Name, tagline, contact info, social links
-- `programs`: Training programs array
-- `coaches`: Coach profiles array
-- `testimonials`: Customer testimonials
+- `programs`: Training programs array (prices use Arabic: `جم/شهر`)
+- `coaches`: Coach profiles array (with full bios)
+- `testimonials`: Customer testimonials (with full quotes)
 - `gallery`: Training images
+- `articles`: Blog articles (with full HTML content)
 
 ## Quick Start Guide
 
 ### Run development server:
 ```bash
-bun run dev
+npm run dev
 ```
 
-### Build for production:
+### Build for production (static export):
 ```bash
-bun run build
+npm run build
+```
+
+### Preview static build:
+```bash
+npx serve out
 ```
 
 ### Run typecheck:
 ```bash
-bun run typecheck
-```
-
-### Run lint:
-```bash
-bun run lint
+npm run typecheck
 ```
 
 ## Session History
@@ -74,5 +77,6 @@ bun run lint
 | Date | Changes |
 |------|---------|
 | Initial | Basketball academy website built with configurable domain and company data |
-| Recent | RTL optimization & Arabic localization |
-| Recent | Enhanced mobile responsive design with 4 breakpoints |
+| Session 2 | RTL optimization & Arabic localization |
+| Session 3 | Enhanced mobile responsive design with 4 breakpoints |
+| Session 4 | Major: SEO metadata, layout refactor, content fixes, sitemap, robots.txt, 404 page, trailingSlash, next/font |

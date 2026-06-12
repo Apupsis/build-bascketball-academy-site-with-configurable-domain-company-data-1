@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import LegalPage from "@/app/legal/LegalPage";
 import { companyConfig } from "@/config/company";
+
+export const metadata: Metadata = {
+  title: "سياسة الخصوصية",
+  description: "تعرف على كيفية جمع واستخدام وحماية بياناتك الشخصية في موقع أكاديمية القاهرة.",
+  robots: { index: false },
+};
 
 export default function PrivacyPolicyPage() {
   return (

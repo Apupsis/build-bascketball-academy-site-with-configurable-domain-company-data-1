@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import { companyConfig } from "@/config/company";
+
+export const metadata: Metadata = {
+  title: "معرض الصور",
+  description:
+    "استكشف لحظات التدريب والبطولات والإنجازات في أكاديمية القاهرة لكرة السلة. شاهد مرافقنا العصرية وجلسات التدريب الاحترافية.",
+  openGraph: {
+    title: "معرض الصور | أكاديمية القاهرة",
+    description: "لحظات من التدريب والبطولات والإنجازات في أكاديمية القاهرة لكرة السلة.",
+  },
+};
 
 export default function GalleryPage() {
   const { gallery, company } = companyConfig;
@@ -19,7 +30,7 @@ export default function GalleryPage() {
           <div className="gallery-grid">
             {gallery.map((image, index) => (
               <div key={index} className="gallery-item">
-                <img src={image} alt={`Gallery ${index + 1}`} />
+                <img src={image} alt={`${company.name} - صورة ${index + 1}`} />
               </div>
             ))}
           </div>
@@ -30,9 +41,9 @@ export default function GalleryPage() {
         <div className="container">
           <h2 className="section-title">أنشطة الأكاديمية</h2>
           <p className="section-subtitle">
-            ننظم various activities طوال العام لتطوير رياضيين متكاملين
+            ننظم أنشطة متنوعة طوال العام لتطوير رياضيين متكاملين
           </p>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', marginTop: '40px' }}>
             <div style={{ padding: '24px', background: 'var(--bg-dark)', borderRadius: '8px', textAlign: 'center' }}>
               <div style={{ fontSize: '40px', marginBottom: '12px' }}>🏀</div>
@@ -51,8 +62,8 @@ export default function GalleryPage() {
             </div>
             <div style={{ padding: '24px', background: 'var(--bg-dark)', borderRadius: '8px', textAlign: 'center' }}>
               <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎓</div>
-              <h4 style={{ color: 'var(--text-primary)', fontSize: '18px', marginBottom: '8px' }}>أيام العيادات</h4>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>ورش متخصصة</p>
+              <h4 style={{ color: 'var(--text-primary)', fontSize: '18px', marginBottom: '8px' }}>ورش متخصصة</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>عيادات تدريبية متخصصة</p>
             </div>
           </div>
         </div>
@@ -63,10 +74,10 @@ export default function GalleryPage() {
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 className="section-title">فلسفتنا في التدريب</h2>
             <p style={{ color: 'var(--text-secondary)', marginTop: '20px', lineHeight: '1.9', fontSize: '16px' }}>
-              في أكاديمية القاهرة، نؤمن بتطوير الرياضي المتكامل. جلساتنا تتجاوز مجرد تعليم مهارات كرة السلة - نركز على بناء الشخصية وروح الفريق المهارات الحياة من خلال الرياضية. كل جلسة مصممة لتحدي اللاعبين جسدياً مع تنمية growth العقبيتهم وحبهم للعبة.
+              في أكاديمية القاهرة، نؤمن بتطوير الرياضي المتكامل. جلساتنا تتجاوز مجرد تعليم مهارات كرة السلة — نركز على بناء الشخصية وروح الفريق والمهارات الحياتية من خلال الرياضة. كل جلسة مصممة لتحدي اللاعبين جسدياً مع تنمية عقليتهم وحبهم للعبة.
             </p>
             <p style={{ color: 'var(--text-secondary)', marginTop: '20px', lineHeight: '1.9', fontSize: '16px' }}>
-              توفر مرافقنا ذات المستوى الأول البيئة المثالية للتعلم والتحسن. من clinic المبتدئين إلى التدريب التنافسي المتقدم، يجد كل لاعب مكانه في القاهرة. نفخر برؤية لاعبينا ينمون - ليس فقط كلاعبي رياضية، بل كأفراد يحملون الدروس المستفادة في الملعب إلى حياتهم اليومية.
+              توفر مرافقنا ذات المستوى الأول البيئة المثالية للتعلم والتحسن. من المبتدئين إلى التدريب التنافسي المتقدم، يجد كل لاعب مكانه في أكاديمية القاهرة. نفخر برؤية لاعبينا ينمون — ليس فقط كلاعبي رياضة، بل كأفراد يحملون دروس الملعب إلى حياتهم اليومية.
             </p>
           </div>
         </div>
@@ -78,7 +89,7 @@ export default function GalleryPage() {
             هل أنت مستعد للبدء؟
           </h2>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.9)', marginBottom: '30px' }}>
-            سجل الآن واحصل على جلسة تجريبية مجانية لتجربة تدريبنا firsthand
+            سجل الآن واحصل على جلسة تجريبية مجانية لتجربة تدريبنا بنفسك
           </p>
           <a href="/contact" className="btn" style={{ background: 'white', color: 'var(--primary)' }}>
             سجل الآن
